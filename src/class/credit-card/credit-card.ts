@@ -15,11 +15,7 @@ export class CreditCard {
     }
 
     repay(amount: number): void {
-        if (amount <= 0) {
-            return
-        }
-
-        if (amount > this.debt) {
+        if (amount <= 0 || amount > this.debt) {
             return
         }
 
