@@ -7,15 +7,7 @@ export class CreditCard {
     }
 
     pay(amount: number): void {
-        if (this.status === 'BLOCKED') {
-            return
-        }
-
-        if (amount <= 0) {
-            return
-        }
-
-        if (this.debt + amount > this.limit) {
+        if (this.status === 'BLOCKED' || amount <= 0 || this.debt + amount > this.limit) {
             return
         }
 
