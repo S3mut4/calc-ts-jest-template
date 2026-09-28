@@ -20,9 +20,9 @@ export class Card {
     this.isBlocked = false
   }
 
-  // TODO: fix the implementation
+  // hides the whole number
   maskCardNumber(): string {
-    return '****'
+    return '****************'
   }
 
   // returns true if the payment went through, false if it was declined
